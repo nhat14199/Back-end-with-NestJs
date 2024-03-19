@@ -68,12 +68,6 @@ export class ProductService {
       .exec();
 
     return deleteProducts;
-    // const index = this.productData.findIndex((item) => item.id === Number(id));
-    // if (index !== -1) {
-    //   this.productData.splice(index, 1);
-    //   return true;
-    // }
-    // return false;
   }
 }
 
