@@ -13,18 +13,6 @@ const products = new Schema(
   { collection: 'products' },
 );
 
-// async function fetchData() {
-//   try {
-//     const productsDB = mongoose.model('nestjs-mongodb', products);
-//     const data = await productsDB.find({});
-//     console.log('data', data);
-//   } catch (error) {
-//     console.log(error);
-//   }
-// }
-
-// fetchData();
-
 const manga = new Schema(
   {
     comicId: String,

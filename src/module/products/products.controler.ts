@@ -30,6 +30,7 @@ Chức năng chính của file controller:
   // Khi truy cập vào url controller products thì nó sẻ đi khởi tao cái đối tượng product service
 
   constructor(private readonly productService: ProductService) {}
+  
 
   @Get()
   async getProduct(): Promise<ResponseData<Products[]>> {
@@ -55,6 +56,8 @@ Chức năng chính của file controller:
     try {
       const postProduct: any =
         await this.productService.createNewProduct(productDTO);
+      console.log('postProduct', postProduct);
+
       return new ResponseData<Products[]>(
         postProduct,
         HttpStatus.SUCCESS,

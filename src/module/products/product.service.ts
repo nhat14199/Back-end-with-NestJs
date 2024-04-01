@@ -5,7 +5,7 @@ import { Product } from 'src/models/product.models';
 import { Model } from 'mongoose';
 import { ProductSchema, Products } from 'src/schemas/product.schemas';
 
-let data = [
+const data = [
   { id: 1, productName: 'Iphone ', price: '1200 usd ', categoryId: '1' },
   { id: 2, productName: 'MacPro ', price: '1999 usd ', categoryId: '1' },
   { id: 3, productName: 'Ipad ', price: '899 usd ', categoryId: '1' },
