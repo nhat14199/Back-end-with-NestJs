@@ -1,0 +1,2 @@
+Trong ngữ cảnh của NestJS, các schema thường đề cập đến các đối tượng được sử dụng để kiểm tra và xác định cấu trúc dữ liệu cho các yêu cầu HTTP, 
+các đối tượng đầu vào hoặc đầu ra của các API, và các đối tượng dữ liệu liên quan đến cơ sở dữ liệu.

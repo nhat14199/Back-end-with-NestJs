@@ -5,29 +5,20 @@ import { Product } from 'src/models/product.models';
 import { Model } from 'mongoose';
 import { ProductSchema, Products } from 'src/schemas/product.schemas';
 
-const data = [
-  { id: 1, productName: 'Iphone ', price: '1200 usd ', categoryId: '1' },
-  { id: 2, productName: 'MacPro ', price: '1999 usd ', categoryId: '1' },
-  { id: 3, productName: 'Ipad ', price: '899 usd ', categoryId: '1' },
-  { id: 4, productName: 'apple watch ', price: '399 usd ', categoryId: '1' },
-  { id: 5, productName: 'apple watch ', price: '399 usd ', categoryId: '1' },
-  { id: 6, productName: 'apple watch ', price: '399 usd ', categoryId: '1' },
-  { id: 7, productName: 'apple watch ', price: '399 usd ', categoryId: '1' },
-];
 @Injectable()
 export class ProductService {
-  private productData: Product[] = data;
-
   constructor(
     @InjectModel(Products.name) private readonly productModel: Model<Products>,
   ) {}
 
   async getProduct(): Promise<Products[]> {
-    return await this.productModel.find().exec();
+    const data: any = await this.productModel.find().exec();
+
+    return data;
   }
+
   async createNewProduct(productDto: ProductDTO): Promise<Products[]> {
     const newProduct: any = new this.productModel(productDto);
-    console.log('newProduct', newProduct);
     return await newProduct.save();
   }
   async getProductDetail(id: number): Promise<Products[]> {

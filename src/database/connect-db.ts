@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
-mongoose.connect('mongodb://127.0.0.1:27017/nestjs-mongodb');
+mongoose.connect('mongodb://127.0.0.1:27017/users');
 
 const products = new Schema(
   {
@@ -13,22 +13,6 @@ const products = new Schema(
   { collection: 'products' },
 );
 
-const manga = new Schema(
-  {
-    comicId: String,
-    title: String,
-    shortTitle: String,
-    description: String,
-    scrapeUrl: String,
-    contents: Array,
-    mediaType: String,
-    resource: String,
-    createdAt: String,
-    updatedAt: String,
-    chapNumber: String,
-  },
-  { collection: 'db-manga' },
-);
 const user = new Schema(
   {
     name: String,

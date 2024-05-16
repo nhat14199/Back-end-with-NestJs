@@ -6,8 +6,8 @@ export enum HttpStatus {
 }
 
 export enum HttpMessage {
-  ERROR = 'lỗi sever cmr',
-  SUCCESS = 'OK thành công rồi nha ',
+  ERROR = 'something error ',
+  SUCCESS = 'success',
 }
 
 export enum httpStatusPost {
@@ -16,6 +16,6 @@ export enum httpStatusPost {
 }
 
 export enum httpMessagePost {
-  ERROR = 'Thiếu body ',
-  SUCCESS = 'Tạo thành công ',
+  ERROR = 'Lack body ',
+  SUCCESS = 'create success  ',
 }
