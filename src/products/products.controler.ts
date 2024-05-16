@@ -1,4 +1,4 @@
-import { httpMessagePost } from './../../global/golbalEnum';
+import { httpMessagePost } from '../global/golbalEnum';
 import { ResponseData, ResponseDataFromServer } from 'src/global/globalClass';
 import { ProductService } from './product.service';
 import {
@@ -35,6 +35,8 @@ Chức năng chính của file controller:
   async getProduct(): Promise<ResponseData<Products[]>> {
     try {
       const productss = await this.productService.getProduct();
+      console.log('productssproductss', productss);
+
       return new ResponseData<Products[]>(
         productss,
         HttpStatus.SUCCESS,
@@ -93,6 +95,8 @@ Chức năng chính của file controller:
     @Body(new ValidationPipe()) productDTO: ProductDTO,
     @Param('id') idFromClient: number,
   ): Promise<ResponseData<Products[]>> {
+    console.log('id', idFromClient);
+
     try {
       const update: any = await this.productService.updateProduct(
         productDTO,
