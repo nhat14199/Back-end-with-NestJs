@@ -5,7 +5,7 @@ import { Product } from 'src/models/product.models';
 import { Model } from 'mongoose';
 import { ProductSchema, Products } from 'src/schemas/product.schemas';
 
-@Injectable()
+@Injectable() // @Injectable() là một decorator được sử dụng để đánh dấu một lớp (class)
 export class ProductService {
   constructor(
     @InjectModel(Products.name) private readonly productModel: Model<Products>,
@@ -13,7 +13,6 @@ export class ProductService {
 
   async getProduct(): Promise<Products[]> {
     const data: any = await this.productModel.find().exec();
-
     return data;
   }
 
